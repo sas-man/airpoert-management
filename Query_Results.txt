@@ -1,0 +1,214 @@
+CMPE343 - Airport Management Information System
+Query Results - All 15 Queries
+Generated: Sun May 24 14:49:18 EEST 2026
+========================================
+
+--- Query 1: Full Airplane Inventory ---
++----------+-------------------+--------------+-----------+---------------+----------+-------------------+-------------+-------------------+
+| plane_no | registration_code | manufacturer | model_no  | aircraft_type | capacity | year_manufactured | status      | last_service_date |
++----------+-------------------+--------------+-----------+---------------+----------+-------------------+-------------+-------------------+
+| PLN-003  | TC-ERN003         | Airbus       | A320neo   | Narrow-body   |      150 |              2019 | active      | 2025-12-01        |
+| PLN-004  | TC-ERN004         | Airbus       | A320neo   | Narrow-body   |      150 |              2020 | maintenance | 2025-09-20        |
+| PLN-009  | TC-ERN009         | Airbus       | A380-800  | Wide-body     |      500 |              2013 | retired     | 2024-06-01        |
+| PLN-006  | TC-ERN006         | ATR          | ATR72-600 | Turboprop     |       68 |              2018 | active      | 2025-11-20        |
+| PLN-001  | TC-ERN001         | Boeing       | B737-800  | Narrow-body   |      162 |              2015 | active      | 2025-11-01        |
+| PLN-002  | TC-ERN002         | Boeing       | B737-800  | Narrow-body   |      162 |              2017 | active      | 2025-10-15        |
+| PLN-005  | TC-ERN005         | Boeing       | B777-300  | Wide-body     |      350 |              2014 | active      | 2025-08-30        |
+| PLN-008  | TC-ERN008         | Boeing       | B787-9    | Wide-body     |      280 |              2021 | active      | 2025-12-10        |
+| PLN-010  | TC-ERN010         | Boeing       | B737-800  | Narrow-body   |      162 |              2010 | maintenance | 2025-07-15        |
+| PLN-007  | TC-ERN007         | Embraer      | ERJ-145   | Regional jet  |       45 |              2016 | active      | 2025-10-05        |
++----------+-------------------+--------------+-----------+---------------+----------+-------------------+-------------+-------------------+
+
+--- Query 2: Technician Certifications and Expertise ---
++-----------------+---------------------+-----------+--------------+-----------------+----------------+
+| technician_name | certification_level | model_no  | manufacturer | expertise_level | certified_date |
++-----------------+---------------------+-----------+--------------+-----------------+----------------+
+| Ali Yilmaz      | master              | A320neo   | Airbus       | advanced        | 2016-02-10     |
+| Ali Yilmaz      | master              | B737-800  | Boeing       | advanced        | 2015-06-01     |
+| Ali Yilmaz      | master              | B777-300  | Boeing       | intermediate    | 2018-05-20     |
+| Emre Ozturk     | junior              | B737-800  | Boeing       | basic           | 2020-07-01     |
+| Emre Ozturk     | junior              | ERJ-145   | Embraer      | basic           | 2021-01-15     |
+| Fatma Demir     | senior              | A320neo   | Airbus       | intermediate    | 2019-09-01     |
+| Fatma Demir     | senior              | A380-800  | Airbus       | basic           | 2020-03-15     |
+| Hasan Celik     | master              | A380-800  | Airbus       | intermediate    | 2016-11-10     |
+| Hasan Celik     | master              | B777-300  | Boeing       | advanced        | 2013-01-20     |
+| Hasan Celik     | master              | B787-9    | Boeing       | advanced        | 2015-07-01     |
+| Mehmet Kaya     | senior              | ATR72-600 | ATR          | intermediate    | 2018-09-01     |
+| Mehmet Kaya     | senior              | B737-800  | Boeing       | advanced        | 2017-03-15     |
+| Zeynep Arslan   | senior              | ATR72-600 | ATR          | advanced        | 2017-08-20     |
+| Zeynep Arslan   | senior              | ERJ-145   | Embraer      | advanced        | 2016-05-10     |
++-----------------+---------------------+-----------+--------------+-----------------+----------------+
+
+--- Query 3: Airplanes Currently in a Hangar ---
++----------+-------------------+----------+-----------+-------------------------+-------------+---------------------+-----------------+-------------------------------+
+| plane_no | registration_code | model_no | hangar_no | location                | hangar_type | in_datetime         | hours_in_hangar | notes                         |
++----------+-------------------+----------+-----------+-------------------------+-------------+---------------------+-----------------+-------------------------------+
+| PLN-010  | TC-ERN010         | B737-800 | HGR-B     | North Apron - Section B | maintenance | 2025-07-15 09:00:00 |            7517 | Major overhaul - frame repair |
+| PLN-004  | TC-ERN004         | A320neo  | HGR-B     | North Apron - Section B | maintenance | 2025-09-20 06:00:00 |            5912 | Ongoing engine maintenance    |
+| PLN-008  | TC-ERN008         | B787-9   | HGR-C     | South Apron - Section C | mixed       | 2025-12-01 08:00:00 |            4182 | Long-haul pre-departure check |
+| PLN-002  | TC-ERN002         | B737-800 | HGR-C     | South Apron - Section C | mixed       | 2025-12-05 10:00:00 |            4084 | Current overnight storage     |
++----------+-------------------+----------+-----------+-------------------------+-------------+---------------------+-----------------+-------------------------------+
+
+--- Query 4: Average Test Score Per Airplane ---
++----------+-------------------+-----------+-------------+-----------+-----------+-----------+--------------+
+| plane_no | registration_code | model_no  | total_tests | avg_score | min_score | max_score | failed_tests |
++----------+-------------------+-----------+-------------+-----------+-----------+-----------+--------------+
+| PLN-008  | TC-ERN008         | B787-9    |           2 |     98.00 |     97.00 |     99.00 |            0 |
+| PLN-006  | TC-ERN006         | ATR72-600 |           2 |     94.50 |     89.00 |    100.00 |            0 |
+| PLN-001  | TC-ERN001         | B737-800  |           4 |     93.75 |     88.00 |    100.00 |            0 |
+| PLN-005  | TC-ERN005         | B777-300  |           3 |     93.33 |     90.00 |     96.00 |            0 |
+| PLN-003  | TC-ERN003         | A320neo   |           3 |     90.33 |     87.00 |     93.00 |            0 |
+| PLN-002  | TC-ERN002         | B737-800  |           3 |     87.00 |     78.00 |     98.00 |            0 |
+| PLN-007  | TC-ERN007         | ERJ-145   |           2 |     85.00 |     82.00 |     88.00 |            0 |
+| PLN-004  | TC-ERN004         | A320neo   |           2 |     63.50 |     55.00 |     72.00 |            1 |
+| PLN-010  | TC-ERN010         | B737-800  |           2 |     56.50 |     48.00 |     65.00 |            1 |
+| PLN-009  | TC-ERN009         | A380-800  |           0 |      NULL |      NULL |      NULL |            0 |
++----------+-------------------+-----------+-------------+-----------+-----------+-----------+--------------+
+
+--- Query 5: Technician Workload Report ---
++-----------------+---------------------+-----------------+-------------+--------------------+-----------------+
+| technician_name | certification_level | tests_performed | total_hours | avg_hours_per_test | avg_score_given |
++-----------------+---------------------+-----------------+-------------+--------------------+-----------------+
+| Hasan Celik     | master              |               6 |        32.5 |               5.42 |           90.17 |
+| Ali Yilmaz      | master              |               6 |        26.5 |               4.42 |           78.67 |
+| Fatma Demir     | senior              |               3 |        11.5 |               3.83 |           79.67 |
+| Zeynep Arslan   | senior              |               4 |         9.0 |               2.25 |           89.75 |
+| Mehmet Kaya     | senior              |               2 |         7.5 |               3.75 |           86.50 |
+| Emre Ozturk     | junior              |               2 |         3.0 |               1.50 |           99.00 |
++-----------------+---------------------+-----------------+-------------+--------------------+-----------------+
+
+--- Query 6: Traffic Controllers - Medical Exam Status ---
++-----------------+-----------------------+------------------+------------------------+-----------------+-------------+
+| controller_name | controller_license_no | tower_assignment | last_medical_exam_date | days_since_exam | exam_status |
++-----------------+-----------------------+------------------+------------------------+-----------------+-------------+
+| Ibrahim Koc     | LIC-TC-003            | Ground Control   | 2024-04-10             |             774 | OVERDUE     |
+| Ayse Yildiz     | LIC-TC-002            | Main Tower       | 2024-11-20             |             550 | OVERDUE     |
+| Murat Sahin     | LIC-TC-001            | Main Tower       | 2025-01-15             |             494 | OVERDUE     |
+| Selin Erdogan   | LIC-TC-004            | Approach Control | 2025-08-05             |             292 | OK          |
++-----------------+-----------------------+------------------+------------------------+-----------------+-------------+
+
+--- Query 7: Most Frequently Used Tests ---
++---------------------------------+---------------+-----------------+-----------+-----------+----------------+
+| test_name                       | test_category | times_performed | avg_score | avg_hours | total_failures |
++---------------------------------+---------------+-----------------+-----------+-----------+----------------+
+| Engine Performance Test         | engine        |               6 |     84.83 |      4.83 |              1 |
+| Avionics Systems Check          | avionics      |               4 |     92.50 |      3.75 |              0 |
+| Structural Integrity Inspection | structural    |               3 |     74.33 |      7.00 |              1 |
+| Hydraulics & Controls Test      | safety        |               3 |     90.00 |      2.33 |              0 |
+| Cabin Safety Equipment Check    | safety        |               3 |     99.33 |      1.33 |              0 |
+| Landing Gear Inspection         | structural    |               2 |     68.50 |      4.50 |              0 |
+| Fuel System Test                | performance   |               1 |     87.00 |      2.00 |              0 |
+| Emergency Systems Test          | safety        |               1 |     88.00 |      3.00 |              0 |
++---------------------------------+---------------+-----------------+-----------+-----------+----------------+
+
+--- Query 8: Airplanes Never Tested ---
++----------+-------------------+--------------+----------+---------+-------------------+
+| plane_no | registration_code | manufacturer | model_no | status  | last_service_date |
++----------+-------------------+--------------+----------+---------+-------------------+
+| PLN-009  | TC-ERN009         | Airbus       | A380-800 | retired | 2024-06-01        |
++----------+-------------------+--------------+----------+---------+-------------------+
+
+--- Query 9: Technician Certifications Per Plane Model ---
++-----------+--------------+---------------+----------+--------------+-------+-----------------+
+| model_no  | manufacturer | aircraft_type | advanced | intermediate | basic | total_certified |
++-----------+--------------+---------------+----------+--------------+-------+-----------------+
+| B737-800  | Boeing       | Narrow-body   |        2 |            0 |     1 |               3 |
+| A320neo   | Airbus       | Narrow-body   |        1 |            1 |     0 |               2 |
+| A380-800  | Airbus       | Wide-body     |        0 |            1 |     1 |               2 |
+| ATR72-600 | ATR          | Turboprop     |        1 |            1 |     0 |               2 |
+| B777-300  | Boeing       | Wide-body     |        1 |            1 |     0 |               2 |
+| ERJ-145   | Embraer      | Regional jet  |        1 |            0 |     1 |               2 |
+| B787-9    | Boeing       | Wide-body     |        1 |            0 |     0 |               1 |
+| C-130H    | Lockheed     | Cargo         |        0 |            0 |     0 |               0 |
++-----------+--------------+---------------+----------+--------------+-------+-----------------+
+
+--- Query 10: Monthly Test Activity Summary ---
+
+--- Query 11: All Employees with Union Membership ---
++-------------+---------------+--------------------+------------+------------------+-----------+---------------------------------+---------------------+
+| ssn         | full_name     | employee_type      | hire_date  | years_of_service | salary    | union_name                      | union_membership_no |
++-------------+---------------+--------------------+------------+------------------+-----------+---------------------------------+---------------------+
+| 100-01-0004 | Hasan Celik   | technician         | 2008-01-20 |             18.4 | 60,000.00 | Aviation Workers Union          | AWU-10004           |
+| 100-01-0001 | Ali Yilmaz    | technician         | 2010-06-01 |             16.0 | 55,000.00 | Aviation Workers Union          | AWU-10001           |
+| 100-01-0005 | Zeynep Arslan | technician         | 2011-05-10 |             15.0 | 53,000.00 | Aviation Workers Union          | AWU-10005           |
+| 100-01-0002 | Mehmet Kaya   | technician         | 2012-03-15 |             14.2 | 52,000.00 | Aviation Workers Union          | AWU-10002           |
+| 100-01-0003 | Fatma Demir   | technician         | 2015-09-01 |             10.7 | 48,000.00 | Aviation Workers Union          | AWU-10003           |
+| 100-01-0006 | Emre Ozturk   | technician         | 2018-07-01 |              7.9 | 45,000.00 | Aviation Workers Union          | AWU-10006           |
+| 200-02-0001 | Murat Sahin   | traffic_controller | 2005-02-01 |             21.3 | 65,000.00 | Air Traffic Controllers Union   | ATCU-20001          |
+| 200-02-0003 | Ibrahim Koc   | traffic_controller | 2007-11-01 |             18.6 | 63,000.00 | Air Traffic Controllers Union   | ATCU-20003          |
+| 200-02-0002 | Ayse Yildiz   | traffic_controller | 2009-08-15 |             16.8 | 62,000.00 | Air Traffic Controllers Union   | ATCU-20002          |
+| 200-02-0004 | Selin Erdogan | traffic_controller | 2014-04-01 |             12.2 | 59,000.00 | Air Traffic Controllers Union   | ATCU-20004          |
+| 300-03-0003 | Serkan Polat  | general            | 2013-09-15 |             12.7 | 42,000.00 | Airport General Employees Union | AGEU-30003          |
+| 300-03-0001 | Burak Acar    | general            | 2016-06-01 |             10.0 | 40,000.00 | Airport General Employees Union | AGEU-30001          |
+| 300-03-0002 | Elif Guler    | general            | 2019-03-01 |              7.2 | 38,000.00 | Airport General Employees Union | AGEU-30002          |
++-------------+---------------+--------------------+------------+------------------+-----------+---------------------------------+---------------------+
+
+--- Query 12: Hangar Utilisation Report ---
++-----------+-------------------------+-------------+-------------+----------+------------------+-----------------+-----------------+
+| hangar_no | location                | hangar_type | status      | capacity | currently_stored | available_slots | utilisation_pct |
++-----------+-------------------------+-------------+-------------+----------+------------------+-----------------+-----------------+
+| HGR-B     | North Apron - Section B | maintenance | operational |        4 |                2 |               2 |            50.0 |
+| HGR-C     | South Apron - Section C | mixed       | operational |        6 |                2 |               4 |            33.3 |
+| HGR-A     | North Apron - Section A | storage     | operational |        5 |                0 |               5 |             0.0 |
+| HGR-D     | East Apron - Section D  | storage     | operational |        3 |                0 |               3 |             0.0 |
+| HGR-E     | West Apron - Section E  | maintenance | closed      |        2 |                0 |               2 |             0.0 |
++-----------+-------------------------+-------------+-------------+----------+------------------+-----------------+-----------------+
+
+--- Query 13: Top Airplane Per Test Category ---
++---------------+----------+-------------------+-----------+-----------+
+| test_category | plane_no | registration_code | model_no  | avg_score |
++---------------+----------+-------------------+-----------+-----------+
+| safety        | PLN-006  | TC-ERN006         | ATR72-600 |    100.00 |
+| performance   | PLN-003  | TC-ERN003         | A320neo   |     87.00 |
+| structural    | PLN-005  | TC-ERN005         | B777-300  |     90.00 |
+| avionics      | PLN-008  | TC-ERN008         | B787-9    |     97.00 |
+| engine        | PLN-008  | TC-ERN008         | B787-9    |     99.00 |
++---------------+----------+-------------------+-----------+-----------+
+
+--- Query 14: Total Repair Cost Per Airplane ---
++----------+-------------------+--------------+-----------+-------------+-------------+-------------------+--------------------+---------------------+
+| plane_no | registration_code | manufacturer | model_no  | status      | num_repairs | total_repair_cost | total_repair_hours | avg_cost_per_repair |
++----------+-------------------+--------------+-----------+-------------+-------------+-------------------+--------------------+---------------------+
+| PLN-004  | TC-ERN004         | Airbus       | A320neo   | maintenance |           2 |         140000.00 |               60.0 |            70000.00 |
+| PLN-010  | TC-ERN010         | Boeing       | B737-800  | maintenance |           2 |         127000.00 |               84.0 |            63500.00 |
+| PLN-002  | TC-ERN002         | Boeing       | B737-800  | active      |           1 |           8500.00 |               10.0 |             8500.00 |
+| PLN-007  | TC-ERN007         | Embraer      | ERJ-145   | active      |           1 |           3200.00 |                6.0 |             3200.00 |
+| PLN-001  | TC-ERN001         | Boeing       | B737-800  | active      |           0 |              NULL |               NULL |                NULL |
+| PLN-003  | TC-ERN003         | Airbus       | A320neo   | active      |           0 |              NULL |               NULL |                NULL |
+| PLN-005  | TC-ERN005         | Boeing       | B777-300  | active      |           0 |              NULL |               NULL |                NULL |
+| PLN-006  | TC-ERN006         | ATR          | ATR72-600 | active      |           0 |              NULL |               NULL |                NULL |
+| PLN-008  | TC-ERN008         | Boeing       | B787-9    | active      |           0 |              NULL |               NULL |                NULL |
+| PLN-009  | TC-ERN009         | Airbus       | A380-800  | retired     |           0 |              NULL |               NULL |                NULL |
++----------+-------------------+--------------+-----------+-------------+-------------+-------------------+--------------------+---------------------+
+
+--- Query 15: Flight Operations & Controller Workload ---
+
+=== END OF QUERY RESULTS ===
+
+--- Query 10 (FIXED): Monthly Test Activity Summary ---
+
+
+--- Query 15 (FIXED): Flight Operations and Controller Workload ---
++-----------------+------------------+-----------------+-------------------+-------------------+-----------------+------------------+----------------+
+| controller_name | tower_assignment | flights_managed | completed_flights | cancelled_flights | delayed_flights | total_passengers | completion_pct |
++-----------------+------------------+-----------------+-------------------+-------------------+-----------------+------------------+----------------+
+| Murat Sahin     | Main Tower       |               3 |                 2 |                 0 |               0 |              568 |           66.7 |
+| Ayse Yildiz     | Main Tower       |               2 |                 1 |                 1 |               0 |              145 |           50.0 |
+| Ibrahim Koc     | Ground Control   |               2 |                 0 |                 0 |               0 |              480 |            0.0 |
+| Selin Erdogan   | Approach Control |               1 |                 0 |                 0 |               0 |               62 |            0.0 |
++-----------------+------------------+-----------------+-------------------+-------------------+-----------------+------------------+----------------+
+
+--- Query 10 (FINAL): Monthly Test Activity Summary (all months) ---
++------------+-----------------+-----------------+----------------------+-----------+-------------+----------+
+| test_month | tests_conducted | distinct_planes | distinct_technicians | avg_score | total_hours | failures |
++------------+-----------------+-----------------+----------------------+-----------+-------------+----------+
+| 2025-03    |               1 |               1 |                    1 |     96.00 |        6.00 |        0 |
+| 2025-04    |               1 |               1 |                    1 |     78.00 |        5.00 |        0 |
+| 2025-05    |               2 |               2 |                    2 |     90.50 |        7.50 |        0 |
+| 2025-06    |               1 |               1 |                    1 |     91.00 |        3.50 |        0 |
+| 2025-07    |               3 |               3 |                    2 |     71.67 |       15.00 |        1 |
+| 2025-08    |               4 |               4 |                    3 |     74.50 |       21.50 |        1 |
+| 2025-09    |               4 |               4 |                    3 |     85.50 |       11.50 |        0 |
+| 2025-10    |               2 |               2 |                    2 |     97.50 |        6.00 |        0 |
+| 2025-11    |               5 |               5 |                    4 |     97.20 |       14.00 |        0 |
++------------+-----------------+-----------------+----------------------+-----------+-------------+----------+
