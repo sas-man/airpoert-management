@@ -86,3 +86,8 @@ The system stores and retrieves information about aircraft, hangars, employees, 
 - The `pass_fail` column in `test_event` is auto-computed: score ≥ 60 → **pass**, below 60 → **fail**
 - A `NULL` value in `airplane_hangar.out_datetime` means the aircraft is **currently inside** that hangar
 - Traffic controllers with `last_medical_exam_date` older than 365 days are flagged as **OVERDUE** in Query 6
+
+
+
+# Git hub repo 
+https://github.com/sas-man/airpoert-management.git
